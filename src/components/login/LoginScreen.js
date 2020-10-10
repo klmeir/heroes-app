@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
 
@@ -33,4 +34,8 @@ export const LoginScreen = ({ history }) => {
             </button>
         </div>
     )
+}
+
+LoginScreen.propTypes = {
+    history: PropTypes.object.isRequired
 }

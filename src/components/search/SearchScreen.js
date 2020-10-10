@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
 import { getHeroesByName } from '../../selectors/getHeroesByName';
 import { HeroCard } from '../heroes/HeroCard';
+import PropTypes from 'prop-types';
 
 export const SearchScreen = ({ history }) => {
 
@@ -88,4 +89,8 @@ export const SearchScreen = ({ history }) => {
             </div>
         </div>
     )
+}
+
+SearchScreen.propTypes = {
+    history: PropTypes.object.isRequired
 }

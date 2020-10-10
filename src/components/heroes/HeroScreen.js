@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
-import { Redirect, useParams } from 'react-router-dom'
+import { Redirect, useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { getHeroById } from '../../selectors/getHeroById';
 
 export const HeroScreen = ({ history }) => {
@@ -60,4 +61,8 @@ export const HeroScreen = ({ history }) => {
 
         </div>
     )
+}
+
+HeroScreen.propTypes = {
+    history: PropTypes.object.isRequired
 }
